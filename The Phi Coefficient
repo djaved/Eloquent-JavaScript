@@ -1,0 +1,24 @@
+The Phi Coefficient allows you determine if a value is two boolean values having any correlation (i.e if eating pizza is true, you turn into a squirrel).
+The mathmetical equation for this can be explained here - https://en.wikipedia.org/wiki/Phi_coefficient.
+
+Example Scenerio
+-----------------
+
+You want to determine if eating chocolates give you spots the next day. Firstly you will need to start recording everyday if you have eaten chocolate (true or false), and if you have spots the next day (true or false). 
+You will have a 2X2 contingency table. Now we know the equation, but how do we represent the results. The simplest way to use a f;at array and to order it buy binary.
+
+Below is function we can use
+
+function pion(table) {
+  table[0] * table[3] - table[1] * table[2] / Math.sqrt(
+  (table[2] + table[3) *
+  (table[0] + table[1]) *
+  (table[1] + table[3]) *
+  (table[0] + table[2]) *
+  )
+}
+
+An answer of 0 shows no correlation.
+
+
+// Need to understand how these 4 numbers can be extracted in the first place.
